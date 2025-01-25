@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            text-align: center;
+        }
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .box {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        .arrow {
+            margin: 5px;
+        }
+        .horizontal {
+            display: flex;
+            align-items: center;
+        }
+        .vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>A simple flow-diagram depicting different resources of Azure for creating an ETL data pipeline</h1>
+    <h3>Flowchart created by Nikhil</h3>
+    <div class="flowchart">
+        <div class="box">Source Systems (e.g., Databases, APIs)</div>
+        <div class="arrow">&#8595;</div>
+        <div class="box">Azure Data Factory (Extract & Load/ Orchestration)</div>
+        <div class="arrow">&#8595;</div>
+        <div class="box">Staging Area (Azure Blob Storage / Data Lake)</div>
+        <div class="arrow">&#8595;</div>
+        <div class="horizontal">
+            <div class="vertical">
+                <div class="box">Azure Databricks (Batch Processing & Transformation)</div>
+                <div class="arrow">&#8595;</div>
+                <div class="box">Azure Data Lake (Processed Data Storage)</div>
+                <div class="arrow">&#8595;</div>
+                <div class="box">Azure SQL Database (Structured Data Storage)</div>
+            </div>
+            <div class="arrow">&#8594;</div>
+            <div class="vertical">
+                <div class="box">Azure Event Hubs / IoT Hub (Real-time Data Ingestion)</div>
+                <div class="arrow">&#8595;</div>
+                <div class="box">Azure Stream Analytics (Real-time Processing)</div>
+                <div class="arrow">&#8595;</div>
+                <div class="box">Azure Cosmos DB (Real-time Data Storage)</div>
+            </div>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="box">Azure Synapse Analytics (Data Warehousing)</div>
+        <div class="arrow">&#8595;</div>
+        <div class="box">Power BI (Visualization & Reporting)</div>
+    </div>
+</body>
+</html>
